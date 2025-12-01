@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Connect</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+          darkMode: "class",
+          theme: {
+              extend: {
+                  colors: {
+                      "primary": "#8b5cf6", // Purple
+                      "background-light": "#f5f3ff", // Lighter purple
+                      "background-dark": "#1e1b4b", // Darker purple
+                  },
+                  fontFamily: {
+                      "display": ["Plus Jakarta Sans"]
+                  },
+                  borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+              },
+          },
+      }
+    </script>
+<style>
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="grid grid-cols-12 max-w-7xl mx-auto">
+<aside class="col-span-3 border-r border-purple-200 dark:border-purple-900 p-6 hidden lg:block">
+<div class="flex items-center gap-2 mb-8">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white">Connect</h1>
+</div>
+<nav class="space-y-4">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold" href="#">
+<svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-800" href="#">
+<svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path></svg>
+<span>Explore</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-800" href="#">
+<svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path></svg>
+<span>Notifications</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-800" href="#">
+<svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+<span>Messages</span>
+</a>
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-full mt-4 hover:bg-purple-700">Post</button>
+</nav>
+</aside>
+<main class="col-span-12 lg:col-span-6 border-r border-purple-200 dark:border-purple-900">
+<div class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 border-b border-purple-200 dark:border-purple-900">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Home</h2>
+</div>
+<div class="p-4 border-b border-purple-200 dark:border-purple-900">
+<div class="flex gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBql6IpY0jvuEUgvPjI3fMkHJB2xF9wjmug-Z43U0DB2T4vHTc-CV2XKW0IYKC9qS_LQhW4nFFx-dLQS5q1QwGsgyUBufZMaIrl1nuLk_EES76SY-re1fUAsyV43pFnJFwsiowR_OkEFFKYBC7KbnIO87wLCZkKpbPDHhHRK7rp5MmQcSIvaxItDY4t-VlQoCXa2Q31O3zcFpIlR4U7k4Q4Hng3w3jq8wqrzPvesn4tFg8ltSp6i2ByLG0VwkItV7AZLGO43i_gBGnd");'></div>
+<div class="w-full">
+<textarea class="w-full bg-transparent p-2 text-xl focus:outline-none resize-none dark:text-slate-300 placeholder-slate-500 dark:placeholder-slate-400" placeholder="What's happening?"></textarea>
+<div class="flex justify-between items-center mt-2">
+<div class="flex items-center gap-2 text-primary">
+<svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path></svg>
+<svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"></path></svg>
+<svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"></path></svg>
+</div>
+<button class="bg-primary text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700">Post</button>
+</div>
+</div>
+</div>
+</div>
+<div class="divide-y divide-purple-200 dark:divide-purple-900">
+<div class="p-4 flex gap-4 hover:bg-purple-100 dark:hover:bg-purple-900/50">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDR5NYvxrwzR5DLlzoCnMMQnpPlYaJYVybTeMV_YT9mb6VO3bG0aJUwfckzBicVC_rbXL2BjcTMaqYEKQ0-fgEd6F8FhyeaL8Jcrfkp6ai3NxL9MlILaUT1ky-tigegyAyO7_S_iTTN3t411m9Cecnbi0U90dEdMDsX6wzk_zE3iBmW7U_GmXD7cEgh6MRN0zLFr1aCchCgQYjuaSeilZu8I8z1fK039d9vlsUlvi428R3Ayn-MJlHiqdlvFAxCXj_2O3PaYjHMAxvx");'></div>
+<div class="w-full">
+<div class="flex items-center gap-2">
+<p class="font-bold text-slate-900 dark:text-white">Jennifer M.</p>
+<p class="text-slate-500 dark:text-slate-400">@jennifer_m · 2h</p>
+</div>
+<p class="mt-1 dark:text-slate-300">Excited to share the latest tech news! We're seeing some incredible breakthroughs in AI and sustainable tech.</p>
+<div class="mt-4 flex justify-between text-slate-500 dark:text-slate-400 max-w-sm">
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"></path></svg> 1.2k</button>
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path></svg> 345</button>
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM17 11h-4v4h-2v-4H7V9h4V5h2v4h4v2z"></path></svg> 42</button>
+</div>
+</div>
+</div>
+<div class="p-4 flex gap-4 hover:bg-purple-100 dark:hover:bg-purple-900/50">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrl9iH4w2x5fgfjuJyL7LEputSb62rWA-mcxMgIVF1yBoj3aOO51VL3CnxY3pl6mvSlOU034fWuQ9Cv4NDLvevz9wnvu60ubA7EyYrBdfH1rDGI2m7hw5f05v-p2jhvsGAIKq4Y0pcUQEOF58_ls1NwwMWWfY4MEk6KWOS1qRLThMh8zkA3xi_aBvEw0c-7tQNGbv6XAB66gSL3xU6488cwGwEdclT_TyuUDNfOrRhsUpEwsKsjcti3EhCUfZyZ_E9bzng5uJu2v8K");'></div>
+<div class="w-full">
+<div class="flex items-center gap-2">
+<p class="font-bold text-slate-900 dark:text-white">Robert S.</p>
+<p class="text-slate-500 dark:text-slate-400">@robert_s · 5h</p>
+</div>
+<p class="mt-1 dark:text-slate-300">The game last night was a nail-biter! What a finish! #SportsHighlights</p>
+<div class="mt-4 flex justify-between text-slate-500 dark:text-slate-400 max-w-sm">
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"></path></svg> 3.1k</button>
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path></svg> 789</button>
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM17 11h-4v4h-2v-4H7V9h4V5h2v4h4v2z"></path></svg> 112</button>
+</div>
+</div>
+</div>
+<div class="p-4 flex gap-4 hover:bg-purple-100 dark:hover:bg-purple-900/50">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCjVSjKq1oPqcAbPoO6Z7j9gNM9KZViOD-H9ZIwUCy6i3fD0tb-52n2LUyjPHYCb4HWnemMTi7Rggk7xkqeKmM0qFXZW0nc08K0fWDf6YpyhmiXflEbrKG0Uz3q3MVpPfjEQ2AGFD2KG8WkEMiJuVAVaY9VoYQl21zVgTkDotZmvmrXEwut7qKwwBsCNQLBlDbYF0QCtRLdhpqDAnZtViwIprdxc0vvWOk1-8bPB-AWbTciE2gQoK53SzTkgj506yF9cXwE59lTVPKz");'></div>
+<div class="w-full">
+<div class="flex items-center gap-2">
+<p class="font-bold text-slate-900 dark:text-white">Emily C.</p>
+<p class="text-slate-500 dark:text-slate-400">@emily_c · 8h</p>
+</div>
+<p class="mt-1 dark:text-slate-300">Just watched the season finale of "The Crowned". Speechless! So well written and acted. #Entertainment</p>
+<div class="mt-4 flex justify-between text-slate-500 dark:text-slate-400 max-w-sm">
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-1.91l-.01-.01L23 10z"></path></svg> 980</button>
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path></svg> 210</button>
+<button class="flex items-center gap-2 hover:text-primary"><svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM17 11h-4v4h-2v-4H7V9h4V5h2v4h4v2z"></path></svg> 55</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<aside class="col-span-3 p-6 hidden lg:block">
+<div class="sticky top-0 py-4">
+<div class="relative mb-6">
+<input class="w-full bg-purple-200/50 dark:bg-purple-900/50 rounded-full pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary placeholder-slate-500 dark:placeholder-slate-400" placeholder="Search" type="text"/>
+<svg class="icon absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+</div>
+<div class="bg-purple-100 dark:bg-purple-900/30 rounded-lg p-4 mb-6">
+<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Trends for you</h3>
+<div class="space-y-3">
+<a class="block hover:bg-purple-200 dark:hover:bg-purple-800 p-2 rounded-lg" href="#"><span class="font-bold text-slate-900 dark:text-white">#Tech</span> <span class="text-sm text-slate-500 dark:text-slate-400">12.5k Posts</span></a>
+<a class="block hover:bg-purple-200 dark:hover:bg-purple-800 p-2 rounded-lg" href="#"><span class="font-bold text-slate-900 dark:text-white">#Sports</span> <span class="text-sm text-slate-500 dark:text-slate-400">9,845 Posts</span></a>
+<a class="block hover:bg-purple-200 dark:hover:bg-purple-800 p-2 rounded-lg" href="#"><span class="font-bold text-slate-900 dark:text-white">#Politics</span> <span class="text-sm text-slate-500 dark:text-slate-400">5,123 Posts</span></a>
+<a class="block hover:bg-purple-200 dark:hover:bg-purple-800 p-2 rounded-lg" href="#"><span class="font-bold text-slate-900 dark:text-white">#Entertainment</span> <span class="text-sm text-slate-500 dark:text-slate-400">22.1k Posts</span></a>
+</div>
+</div>
+<div class="bg-purple-100 dark:bg-purple-900/30 rounded-lg p-4">
+<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">Who to follow</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDU2Oe563RS9Dt215AkdGpdUWDsa2uL1ffc2DQr-FB1yw84vQedm6Q4hjW5Ii9I1fHeQF_l_bLCNgZ0rfq2T3uPN1H7502Y03frfrvBp_i0sq0lAlFX1eqQetnHEeOpoO-mn50cMNinXxe44MvCW-VhZqK1HslhTyALXbZ-aAB0FaK7Y7p0gV1FcFJ064glWFhoPNzPfabYycJqrSOX-8w_Hp8XU7R_w_zourWUGmLSuvk5Nv2Noqlgg_SIqdnB3W2VScRp2LIgWyrk");'></div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Jennifer M.</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">@jennifer_m</p>
+</div>
+</div>
+<button class="bg-primary dark:bg-white text-white dark:text-black font-bold text-sm py-1.5 px-4 rounded-full hover:bg-purple-700 dark:hover:bg-purple-200">Follow</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxb3BFKhfyuTanncfE1z_rn2NBQdXhRkOVDKaIyS9AJviEmUYEMUXPZonbht3Dt7hyCHhhYSI8kLOGldIGwnYAVyvYOIcqcQ-PyNsXtLJSlDUuM8ndysCHJpeVFl6RYKJvVWr9H2-r0MqiZtD7pB0-LlokXmoPbrejt_kU_LK3xXk62Ixk7y_CAULrYXloYMG4hAQPqt1B5rDrdmvSWtvZ-DKiogublM3P4hxpDxgPP7XMMiMutfIVJM1Eyt0tuTDBf0Wa6z5Ne_Rp");'></div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Robert S.</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">@robert_s</p>
+</div>
+</div>
+<button class="bg-primary dark:bg-white text-white dark:text-black font-bold text-sm py-1.5 px-4 rounded-full hover:bg-purple-700 dark:hover:bg-purple-200">Follow</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlHNw3znMany7d_zaMfo_w605tKgDMv6XGqC8x7R0ve41V3hfrk2jZF_xO8h2Jnk6Cji7ltDvPDzPCfueG945WiZOsuMFy8xpsRN9Ch3wGlxLITbuy8kHUOnnOn4RsnKX6XVuLGfu99-X4yRwwPhSMfCfQKlpDc_nz0L5H8lN7vV7U1f61xEZhZ_zhHc4AlW5pzocAoGsKWnvnHCrew-PPpFSOt6cfO3BH1m0_Ej-DODw-Xc9AOwOIwNITF-UtHvVfGDb5V6HmE9Dx");'></div>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Emily C.</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">@emily_c</p>
+</div>
+</div>
+<button class="bg-primary dark:bg-white text-white dark:text-black font-bold text-sm py-1.5 px-4 rounded-full hover:bg-purple-700 dark:hover:bg-purple-200">Follow</button>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</body></html>
