@@ -18,18 +18,17 @@ const emits = defineEmits<{
 <template>
 
     <div class="p-4 flex items-center gap-2">
-        <h1 class="font-bold text-slate-900 text-2xl dark:text-white">{{ feed.createdAt.toLocaleDateString('en-GB',
+        <h1 class="font-bold text-slate-900 text-2xl ">{{ feed.createdAt.toLocaleDateString('en-GB',
             { month: 'short', day: 'numeric' }) }}</h1>
     </div>
     <div class="divide-y divide-purple-200 dark:divide-purple-900">
-        <div class="p-4 flex gap-4 hover:bg-purple-100 dark:hover:bg-purple-900/50"
-            v-for="(idea, index) in props.feed.ideas">
+        <div class="p-4 flex gap-4 hover:bg-purple-100 " v-for="(idea, index) in props.feed.ideas">
             <div class="w-full">
                 <div class="flex items-center gap-2">
-                    <p class="font-bold text-slate-900 dark:text-white">{{ idea.title }}</p>
+                    <p class="font-bold text-slate-900 ">{{ idea.title }}</p>
                 </div>
-                <p class="mt-1 dark:text-slate-300">{{ idea.description }}</p>
-                <div class="mt-4 flex justify-end gap-4 text-slate-500 dark:text-slate-400">
+                <p class="mt-1 ">{{ idea.description }}</p>
+                <div class="mt-4 flex justify-end gap-4 text-slate-500 ">
                     <button class="flex items-center gap-2 hover:text-primary" @click="emits('tapLike', index)">
                         <svg xmlns="http://www.w3.org/2000/svg" :class="{
                             'icon-filled': idea.liked === 'YES',

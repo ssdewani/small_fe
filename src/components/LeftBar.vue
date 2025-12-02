@@ -4,25 +4,23 @@
 
 
 <template>
-    <aside class="col-span-3 border-r border-purple-200 dark:border-purple-900 p-6 hidden lg:block">
+    <aside class="col-span-3 border-r border-purple-200  p-6 hidden lg:block">
         <div class="flex items-center gap-2 mb-8">
             <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
                     fill="currentColor"></path>
             </svg>
-            <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Small Talk</h1>
+            <h1 class="text-2xl font-bold text-slate-900 ">Small Talk</h1>
         </div>
         <nav class="space-y-4">
-            <a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold"
-                href="#">
+            <a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10  text-primary font-bold" href="#">
                 <svg class="icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
                 </svg>
                 <span>Home</span>
             </a>
-            <a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-800"
-                href="#">
+            <a class="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-purple-200 " href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round"

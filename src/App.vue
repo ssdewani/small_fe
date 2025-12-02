@@ -115,15 +115,12 @@ const submitFeedback = async (feedback: string) => {
 
 
 
-
-
 <template>
   <header class="p-2">
-    <div
-      class="flex justify-between top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 border-b border-purple-200 dark:border-purple-900">
-      <h2 class="text-xl font-bold text-slate-900 dark:text-white">Home</h2>
+    <div class="flex justify-between top-0 bg-background-light/80 backdrop-blur-sm p-4 border-b border-purple-200">
+      <h2 class="text-xl font-bold text-slate-900">Home</h2>
       <SignedOut>
-        <SignInButton class="text-l text-slate-900 dark:text-white" />
+        <SignInButton class="text-l text-slate-900" />
       </SignedOut>
       <SignedIn>
         <UserButton />
@@ -132,12 +129,16 @@ const submitFeedback = async (feedback: string) => {
   </header>
   <div class="grid grid-cols-12 max-w-7xl mx-auto font-display text-slate-800">
     <LeftBar />
-    <main class="col-span-12 lg:col-span-6 border-r border-purple-200 dark:border-purple-900">
+    <main class="col-span-12 lg:col-span-6 border-r border-purple-200">
       <FeedbackBox @submit-feedback="submitFeedback" />
       <div v-if="loading" class="p-4 flex items-center gap-2">
-        <h1 class="font-bold text-slate-900 text-2xl dark:text-white">Loading ...</h1>
+        <h1 class="font-bold text-slate-900 text-2xl">Loading ...</h1>
       </div>
       <FeedContainer v-if="!loading" :feed="currentFeed" @tap-like="toggleLike" @tap-dislike="toggleDisLike" />
+      <div v-if="!loading" class="flex justify-end items-center mt-4 p-4">
+        <button @click="regenerateFeed"
+          class="bg-primary text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700">Regenerate</button>
+      </div>
     </main>
     <RightBar :preferredTopics="preferredTopics" :suggestedTopics="suggestedTopics" @remove-topic="removeTopic"
       @add-topic="addTopic" @regenerate="regenerateFeed" />
