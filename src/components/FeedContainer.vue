@@ -16,11 +16,6 @@ const emits = defineEmits<{
 </script>
 
 <template>
-
-    <div class="p-4 flex items-center gap-2">
-        <h1 class="font-bold text-slate-900 text-2xl ">{{ feed.createdAt.toLocaleDateString('en-GB',
-            { month: 'short', day: 'numeric' }) }}</h1>
-    </div>
     <div class="divide-y divide-purple-200 dark:divide-purple-900">
         <div class="p-4 flex gap-4 hover:bg-purple-100 " v-for="(idea, index) in props.feed.ideas">
             <div class="w-full">

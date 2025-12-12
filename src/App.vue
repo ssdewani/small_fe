@@ -20,17 +20,31 @@ const currentFeed = ref<Feed>({
 const preferredTopics = ref<string[]>([]);
 const suggestedTopics = ref<string[]>([]);
 const loading = ref<boolean>(true);
+const noFeed = ref<boolean>(false);
 const api = useApi()
 
+const selectedDate = ref(new Date().toISOString().split('T')[0]);
 
 const fetchHome = async () => {
   try {
-    const response = await api.get('/home');
+    const response = await api.get('/home', {
+      params: {
+        date: selectedDate.value
+      }
+    });
+    if (response.data.ideas.length === 0) {
+      noFeed.value = true;
+      loading.value = false;
+      return;
+    }
     currentFeed.value.ideas = response.data.ideas;
     console.log("response data: ", response.data);
     currentFeed.value.id = response.data.feedId;
     loading.value = false;
+    noFeed.value = false;
   } catch (err) {
+    noFeed.value = true;
+    loading.value = false;
     console.error('Failed to load ideas', err);
   }
 };
@@ -131,10 +145,18 @@ const submitFeedback = async (feedback: string) => {
     <LeftBar />
     <main class="col-span-12 lg:col-span-6 border-r border-purple-200">
       <FeedbackBox @submit-feedback="submitFeedback" />
+      <div class="mt-4 font-bold text-slate-900 text-xl p-4">
+        <input type="date" v-model="selectedDate" @change="fetchHome"
+          class="border border-purple-300 rounded px-2 py-1 text-slate-700 focus:outline-none focus:border-purple-500" />
+      </div>
       <div v-if="loading" class="p-4 flex items-center gap-2">
         <h1 class="font-bold text-slate-900 text-2xl">Loading ...</h1>
       </div>
-      <FeedContainer v-if="!loading" :feed="currentFeed" @tap-like="toggleLike" @tap-dislike="toggleDisLike" />
+      <div v-if="noFeed" class="p-4 flex items-center gap-2">
+        <h1 class="font-bold text-slate-900 text-2xl">No feed found</h1>
+      </div>
+      <FeedContainer v-if="!loading && !noFeed" :feed="currentFeed" @tap-like="toggleLike"
+        @tap-dislike="toggleDisLike" />
       <div v-if="!loading" class="flex justify-end items-center mt-4 p-4">
         <button @click="regenerateFeed"
           class="bg-primary text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700">Regenerate</button>
