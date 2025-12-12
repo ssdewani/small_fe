@@ -24,6 +24,7 @@ const noFeed = ref<boolean>(false);
 const api = useApi()
 
 const selectedDate = ref(new Date().toISOString().split('T')[0]);
+const mobileTopicsOpen = ref(false);
 
 const fetchHome = async () => {
   try {
@@ -133,17 +134,29 @@ const submitFeedback = async (feedback: string) => {
   <header class="p-2">
     <div class="flex justify-between top-0 bg-background-light/80 backdrop-blur-sm p-4 border-b border-purple-200">
       <h2 class="text-xl font-bold text-slate-900">Home</h2>
-      <SignedOut>
-        <SignInButton class="text-l text-slate-900" />
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
+      <div class="flex items-center gap-2">
+        <button @click="mobileTopicsOpen = !mobileTopicsOpen" class="lg:hidden p-2 text-slate-900">
+          <svg v-if="!mobileTopicsOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <SignedOut>
+          <SignInButton class="text-l text-slate-900" />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </div>
     </div>
   </header>
   <div class="grid grid-cols-12 max-w-7xl mx-auto font-display text-slate-800">
     <LeftBar />
-    <main class="col-span-12 lg:col-span-6 border-r border-purple-200">
+    <main class="col-span-12 lg:col-span-6 border-r border-purple-200" v-show="!mobileTopicsOpen">
       <FeedbackBox @submit-feedback="submitFeedback" />
       <div class="mt-4 font-bold text-slate-900 text-xl p-4">
         <input type="date" v-model="selectedDate" @change="fetchHome"
@@ -157,13 +170,18 @@ const submitFeedback = async (feedback: string) => {
       </div>
       <FeedContainer v-if="!loading && !noFeed" :feed="currentFeed" @tap-like="toggleLike"
         @tap-dislike="toggleDisLike" />
-      <div v-if="!loading" class="flex justify-end items-center mt-4 p-4">
-        <button @click="regenerateFeed"
-          class="bg-primary text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700">Regenerate</button>
-      </div>
+
     </main>
-    <RightBar :preferredTopics="preferredTopics" :suggestedTopics="suggestedTopics" @remove-topic="removeTopic"
-      @add-topic="addTopic" @regenerate="regenerateFeed" />
+
+    <!-- Mobile Topics View -->
+    <div v-if="mobileTopicsOpen" class="col-span-12 lg:hidden">
+      <RightBar :preferredTopics="preferredTopics" :suggestedTopics="suggestedTopics" @remove-topic="removeTopic"
+        @add-topic="addTopic" @regenerate="regenerateFeed" />
+    </div>
+
+    <!-- Desktop RightBar -->
+    <RightBar class="col-span-3 hidden lg:block" :preferredTopics="preferredTopics" :suggestedTopics="suggestedTopics"
+      @remove-topic="removeTopic" @add-topic="addTopic" @regenerate="regenerateFeed" />
   </div>
 </template>
 

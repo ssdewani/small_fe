@@ -8,12 +8,13 @@ const props = defineProps<{
 const emits = defineEmits<{
     addTopic: [topic: string];
     removeTopic: [topic: string];
+    regenerate: [];
 }>()
 
 </script>
 
 <template>
-    <aside class="col-span-3 p-6 hidden lg:block">
+    <aside class="p-6">
         <div class="sticky top-0 py-4">
             <div class="bg-purple-100  rounded-lg p-4 mb-2">
                 <h3 class="text-xl font-bold mb-4 text-slate-900 ">Your Topics</h3>
@@ -34,5 +35,10 @@ const emits = defineEmits<{
                 </div>
             </div>
         </div>
+        <button @click="emits('regenerate')"
+            class=" bg-primary text-white font-bold py-2 px-6 rounded-full hover:bg-purple-700 mt-6">
+            Regenerate Feed
+        </button>
+
     </aside>
 </template>
