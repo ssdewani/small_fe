@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/vue';
-import { useRouter } from 'vue-router';
+import { SignInButton, SignUpButton } from '@clerk/vue';
 import { ref } from 'vue';
 
-const router = useRouter();
 
-const navigateToApp = () => {
-    router.push('/app');
-};
 
 const steps = ref([
     {
