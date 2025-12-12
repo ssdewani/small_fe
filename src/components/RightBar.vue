@@ -15,7 +15,7 @@ const emits = defineEmits<{
 
 <template>
     <aside class="p-6">
-        <div class="sticky top-0 py-4">
+        <div class="top-0 py-4">
             <div class="bg-purple-100  rounded-lg p-4 mb-2">
                 <h3 class="text-xl font-bold mb-4 text-slate-900 ">Your Topics</h3>
                 <div class="space-y-3">
@@ -25,7 +25,7 @@ const emits = defineEmits<{
                 </div>
             </div>
         </div>
-        <div class="sticky top-0 py-1">
+        <div class="top-0 py-1">
             <div class="bg-blue-100  rounded-lg p-4 mb-2">
                 <h3 class="text-xl font-bold mb-4 text-slate-900 ">Suggested Topics</h3>
                 <div class="space-y-3">
